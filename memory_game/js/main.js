@@ -1,13 +1,30 @@
-/*var cardOne = "Queen";
-var cardTwo = "King";
-var cardThree = "King";
-var cardFour = "Queen";
-console.log("User flipped" + cardOne);
-console.log("User flipped" + cardTwo);*/
-var cards = ["queen", "queen", "king", "King"];
+var cards = [
+  {
+    rank: "queen",
+    suit: "hearts",
+    cardImage: "images/queen-of-hearts.png"
+  },
+  {
+    rank: "queen",
+    suit: "diamonds",
+    cardImage: "images/queen-of-diamonds.png"
+  },
+  {
+    rank: "king",
+    suit: "hearts",
+    cardImage: "images/king-of-hearts.png"
+  },
+  {
+    rank: "king",
+    suit: "diamonds",
+    cardImage: "images/king-of-diamonds.png"
+  },
+];
 cards;
+
 var cardsInPlay = []
-cardsInPlay.push(cards[0]);
+cardsInPlay.push(cards[0].rank);
+cardsInPlay.push(cards[2].rank);
 
 var checkForMatch = function (){
 if (cardsInPlay[0] === cardsInPlay[1]) {
@@ -21,22 +38,10 @@ var flipCard = function (cardId) {
 var cardOne;
 var cardTwo;
 checkForMatch();
-  console.log("user flipped " + cards[0]);
+  console.log("user flipped " + cards[0].rank);
 };
-
 flipCard(0);
 flipCard(2);
-
-
-/*
-var cardOne = cards[0];
-cardsInPlay.push(cardOne);
-console.log("user flipped queen");
-
-var cardTwo = cards[2];
-cardsInPlay.push(cardTwo);
-console.log("user flipped king");
-*/
 
 if (cardsInPlay.length === 2) {
   //Condition will be true
@@ -45,3 +50,6 @@ if (cardsInPlay.length === 2) {
 } else {
   result = alert("Sorry, try again");
 };
+
+console.log("images/queen-of-hearts.png");
+console.log("queen");
